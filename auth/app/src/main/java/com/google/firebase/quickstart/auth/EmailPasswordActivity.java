@@ -194,6 +194,10 @@ public class EmailPasswordActivity extends BaseActivity implements
             mPasswordField.setError("Required.");
             valid = false;
         } else {
+                if (password.length()<6){
+                        mPasswordField.setError("Minimum 6 characters.");
+                        valid = false;
+                }
             mPasswordField.setError(null);
         }
 
